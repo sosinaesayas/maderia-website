@@ -1,0 +1,19 @@
+.review-table{
+    display: grid;
+    grid-template-columns: repeat(2 , auto);
+    align-items: center;
+    width : 90%;
+    margin-left: 5%;
+    border: 2px lightgray solid;
+   
+}
+.article-container{
+    clear: both;
+    margin-bottom: 3rem;
+    overflow-y: hidden;
+}
+.article-container img{
+    max-height: 100%;
+    object-fit: contain;
+    float: left;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="static/hotel-detail.css">
+    <link rel="stylesheet" href="../public/images/hotel-detail.css">
+    <title>Hotel-detail</title>
+</head>
+<body>
+        <div class = "header">
+        <div class = "log">
+            <h1><a href="./home.hbs">Maderia.com</a> </h1>
+        </div>
+            
+
+            <div class= "nav-links">
+                <a href="">Nearby Hotels</a>
+                <a href="">Register</a>
+                <a href="">Sign in</a>
+    </div>
+        </div>
+
+
+
+<img src="../img-1.png" alt="">
+
+
+        <div>
+
+            <h1>{{hotelName}}</h1>
+
+           {{#each hotelInformation}}
+           <div class = "article-container">
+                <p class = "paragraph">
+                      <img src= {{src}} alt= {{hotelName}} >
+                    {{article}}
+               
+
+            
+                  
+
+               
+
+                </div>
+
+           {{/each}}
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+        <div class = "reviews">
+            {{#each ratingInfo}}
+                <div class = "review-table">
+                <div class = "personal-info">
+                 <p id  = {{personId}}>
+                    <script>
+                    for(let i = 1 ; i <=5 ; i++){
+                        if (i <= {{ratingOfPerson}}){
+                            document.getElementById({{personId}}).innerHTML += `<span class="fa fa-star checked"></span>`;
+                        }
+                        else{
+                            document.getElementById({{personId}}).innerHTML += `<span class="fa fa-star"></span>`;
+                        }
+                    }
+                    </script>    
+
+                 </p>
+                 <p>{{personName}}</p>
+                 
+                 
+                
+                </div>
+
+        <div class = "message">
+            {{personReview}}
+        </div>
+
+</div>
+            {{/each}}
+        </div>
+
+
+</body>
+</html>
